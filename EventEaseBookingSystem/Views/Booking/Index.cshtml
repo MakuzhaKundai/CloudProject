@@ -1,0 +1,26 @@
+﻿@model IEnumerable<EventEaseBookingSystem.Models.BookingModel>
+
+<h2>Bookings</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Booking ID</th>
+            <th>Event Name</th>
+            <th>Venue Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in Model)
+        {
+            <tr>
+                <td>@booking.BookingId</td>
+                <td>@booking.EventName</td>
+                <td>@booking.VenueName</td>
+                <td>@booking.StartDate.ToShortDateString()</td>
+                <td>@booking.EndDate.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>

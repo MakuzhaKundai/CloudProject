@@ -1,0 +1,19 @@
+﻿
+@model IEnumerable<EventEaseBookingSystem.Models.Venue>
+
+<h2>Venues</h2>
+<div class="row">
+    @foreach (var venue in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="@venue.ImageUrl" class="card-img-top" alt="@venue.Name">
+                <div class="card-body">
+                    <h5 class="card-title">@venue.Name</h5>
+                    <p class="card-text">Location: @venue.Location</p>
+                    <p class="card-text">Capacity: @venue.Capacity</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

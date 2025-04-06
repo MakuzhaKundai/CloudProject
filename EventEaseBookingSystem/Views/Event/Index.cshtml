@@ -1,0 +1,19 @@
+﻿@model IEnumerable<EventEaseBookingSystem.Models.EventModel>
+
+<h2>Events</h2>
+<div class="row">
+    @foreach (var ev in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="@ev.ImageUrl" class="card-img-top" alt="@ev.Name">
+                <div class="card-body">
+
+                    <h5 class="card-title">@ev.Name</h5>
+                    <p class="card-text">Date: @ev.Date.ToShortDateString()</p>
+                    <p class="card-text">Venue ID: @ev.VenueId</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
